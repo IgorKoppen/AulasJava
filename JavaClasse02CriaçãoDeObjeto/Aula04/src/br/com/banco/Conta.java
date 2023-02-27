@@ -1,22 +1,22 @@
 package br.com.banco;
 
-public class Conta {
-	private Cliente cliente;
-	private long numeroConta;
-	private double saldo;
+public abstract class Conta {
+	//Abstract na class proibe instancia da class main
+	protected Cliente cliente;
+	protected int numeroConta;
+	protected double saldo;
 
-	public Conta(Cliente cliente, int numeroConta, double saldo) {
+	public Conta(Cliente cliente, int numeroConta) {
 		this.cliente = cliente;
 		this.numeroConta = numeroConta;
-		this.saldo = saldo;
+		this.saldo = 0;
 	}
 	
 	public boolean deposito(double valor) {
-		if (valor > 0 && this.saldo >= valor) {
+		if (valor > 0) {
 			this.saldo = this.saldo + valor;
 			return true;
 		}
-		System.out.println("Saldo insuficiente!");
 		return false;
 	}
 
@@ -36,9 +36,8 @@ public class Conta {
 		return false;
 	}
 
-	public void exibirSaldo() {
-		System.out.println("Cliente: " + this.cliente.getNome());
-		System.out.println("Saldo: " + this.saldo);
-	}
+	
+	public abstract void exibirSaldo();
+		
 
 }
