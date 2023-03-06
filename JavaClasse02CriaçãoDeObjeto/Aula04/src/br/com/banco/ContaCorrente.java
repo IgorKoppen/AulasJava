@@ -9,20 +9,18 @@ public class ContaCorrente extends Conta {
 		this.saldoInvestimento = 0.0;
 	}
 
-	public void investir(double valor, int tipo) {
+	public void investir(Produto produto, double valor) {
 		boolean teste = this.sacar(valor);
-		if (teste) {
-			switch (tipo) {
-			case 1:
-				this.saldoInvestimento += valor * 1.01;
-				break;
-			case 2:
-				this.saldoInvestimento += valor * 1.05;
-				break;
-			default:
-				this.saldoInvestimento += valor * 1.1;
-				break;
-			}
+		if (teste == true) {
+			this.saldoInvestimento += produto.investir(valor);
+		}
+	}
+	public void resgatar(double valor) {
+		if(this.saldoInvestimento >= valor){
+			this.saldoInvestimento -= valor;
+			this.deposito(valor);
+		}else{
+			System.out.println("Saldo de investimento insuficiente");
 		}
 	}
 
@@ -33,7 +31,5 @@ public class ContaCorrente extends Conta {
 	   System.out.println("Saldo: " + this.saldo);
 	   System.out.println("Saldo investimento: " + this.saldoInvestimento);
 	   System.out.println("Saldo total: " + saldoTotal);
-	   
-		
 	}
 }

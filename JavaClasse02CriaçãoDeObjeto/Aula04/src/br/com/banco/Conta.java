@@ -2,14 +2,19 @@ package br.com.banco;
 
 public abstract class Conta {
 	//Abstract na class proibe instancia da class main
-	protected Cliente cliente;
-	protected int numeroConta;
+	protected final Cliente cliente;
+	protected final long numeroConta;
 	protected double saldo;
+	private static long contador;
 
+	public static void exibirContator(){
+		System.out.println("Contas: " + contador);
+	}
+	
 	public Conta(Cliente cliente, int numeroConta) {
 		this.cliente = cliente;
 		this.numeroConta = numeroConta;
-		this.saldo = 0;
+		contador++;
 	}
 	
 	public boolean deposito(double valor) {

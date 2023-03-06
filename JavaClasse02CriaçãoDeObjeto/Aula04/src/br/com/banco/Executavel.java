@@ -3,6 +3,11 @@ package br.com.banco;
 public class Executavel {
 
 	public static void main(String[] args) {
+		
+		CDB cdb = new CDB();
+		LCI lci = new LCI();
+		Fundos fundos = new Fundos();
+		
 		Cliente client1 = new Cliente("Pedro", "RuaDasPerolas,127", "08/10/2002");
 		ContaCorrente conta1 = new ContaCorrente(client1, 0011);
 		Cliente client2 = new Cliente("Enrico", "RuaSalvador,147", "08/10/2000");
@@ -18,9 +23,12 @@ public class Executavel {
 		conta2.exibirSaldo();
 		*/
 		conta2.deposito(1000);
+		conta2.resgatar(1000);
+	    conta2.investir(lci, 1000);
+	    conta2.exibirSaldo();
+	    conta2.resgatar(1000);
 		conta2.exibirSaldo();
-		conta2.investir(100, 3);
-		conta2.exibirSaldo();
+		Conta.exibirContator();
 	}
 
 }

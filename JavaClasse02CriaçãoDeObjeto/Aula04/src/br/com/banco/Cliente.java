@@ -34,5 +34,4 @@ public class Cliente {
 	public String getDataNascimento() {
 		return dataNascimento;
 	}
-
 }
