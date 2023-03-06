@@ -1,8 +1,8 @@
 package br.com.banco;
 
-public class ContaCorrente extends Conta {
+public final class ContaCorrente extends Conta {
 
-	double saldoInvestimento;
+	private double saldoInvestimento;
 
 	public ContaCorrente(Cliente cliente, int numeroConta) {
 		super(cliente, numeroConta);
@@ -31,5 +31,6 @@ public class ContaCorrente extends Conta {
 	   System.out.println("Saldo: " + this.saldo);
 	   System.out.println("Saldo investimento: " + this.saldoInvestimento);
 	   System.out.println("Saldo total: " + saldoTotal);
+	   System.out.println("Data de abertura: " + this.dataAbertura);
 	}
 }

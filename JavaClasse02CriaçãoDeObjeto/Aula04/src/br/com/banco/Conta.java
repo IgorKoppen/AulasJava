@@ -1,10 +1,13 @@
 package br.com.banco;
 
+import java.util.Date;
+
 public abstract class Conta {
 	//Abstract na class proibe instancia da class main
 	protected final Cliente cliente;
 	protected final long numeroConta;
 	protected double saldo;
+	protected Date dataAbertura;
 	private static long contador;
 
 	public static void exibirContator(){
@@ -14,6 +17,7 @@ public abstract class Conta {
 	public Conta(Cliente cliente, int numeroConta) {
 		this.cliente = cliente;
 		this.numeroConta = numeroConta;
+		this.dataAbertura = new Date();
 		contador++;
 	}
 	

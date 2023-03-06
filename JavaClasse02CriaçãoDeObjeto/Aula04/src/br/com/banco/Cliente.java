@@ -1,14 +1,21 @@
 package br.com.banco;
 
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Cliente {
 	private String nome;
 	private String endereco;
-	private String dataNascimento;
+	private final Date dataNascimento;
+	
 
-	public Cliente(String nome, String endereco, String dataNascimento) {
+	public Cliente(String nome, String endereco, String dataNascimento) throws ParseException {
 		this.nome = nome;
 		this.endereco = endereco;
-		this.dataNascimento = dataNascimento;
+		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+		this.dataNascimento = formato.parse(dataNascimento);
 	}
 
 	public void setNome(String nome) {
@@ -19,9 +26,6 @@ public class Cliente {
 		this.endereco = endereco;
 	}
 
-	public void setDataNascimento(String dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
 
 	public String getNome() {
 		return nome;
@@ -31,7 +35,7 @@ public class Cliente {
 		return endereco;
 	}
 
-	public String getDataNascimento() {
+	public Date getDataNascimento() {
 		return dataNascimento;
 	}
 }
