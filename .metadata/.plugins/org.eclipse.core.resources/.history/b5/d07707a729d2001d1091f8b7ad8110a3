@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Executavel {
+
+	public static void main(String[] args) {
+		Random r = new Random();
+		ArrayList<Integer> lista = new ArrayList<Integer>();
+      long inicio = System.currentTimeMillis();
+       System.out.println("Inicio: "inicio);
+		for(int i = 0; i < 50000; i++){
+			lista.add(r.nextInt());
+		}
+		System.out.println("Fim: "+inicio);
+	}
+
+}

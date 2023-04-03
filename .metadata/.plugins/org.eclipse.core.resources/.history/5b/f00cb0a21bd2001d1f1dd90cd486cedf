@@ -1,0 +1,15 @@
+package map;
+import objetos.User;
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class MapUsuario {
+  User pedro = new User(0, "Igor", "root");
+  
+  Map<Integer, Object> usuariosMap = new HashMap<Integer,Object>();
+  usuariosMap.
+	
+	
+	
+}

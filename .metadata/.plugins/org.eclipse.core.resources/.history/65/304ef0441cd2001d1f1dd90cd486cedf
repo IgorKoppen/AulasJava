@@ -1,0 +1,19 @@
+package map;
+import objetos.User;
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class MapUsuario {
+  User igor = new User(1, "Igor", "root");
+  User maria = new User(2, "maria", "admin");
+  User joao = new User(3, "João", "root");
+  User lucas = new User(4, "Lucas", "admin");
+  User jose = new User(3, "Jose", "root");
+  
+
+  
+	
+	
+	
+}

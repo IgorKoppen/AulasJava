@@ -1,0 +1,17 @@
+package map;
+import objetos.User;
+import java.util.Map;
+import java.util.HashMap;
+
+
+
+public class MapUsuario {
+  User pedro = new User("Pedro", "565742");
+  
+  Map<K, V>
+	
+	
+	
+	
+	
+}

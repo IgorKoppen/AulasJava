@@ -1,0 +1,16 @@
+package map;
+import objetos.User;
+import java.util.HashMap;
+
+
+
+public class MapUsuario {
+  User pedro = new User("Pedro", "565742");
+  
+ HashMap<Integer, String> Usuarios = new HashMap<Object>();
+	
+	
+	
+	
+	
+}
